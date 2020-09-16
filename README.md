@@ -11,3 +11,6 @@ This repository is a capstone project for Udacity DevOps Nanodegree 2020
 - Use Docker to containerise the app or website
 - Build Kubernetes clusters
 - Deploy the app or website using the Kubernetes clusters
+
+## Project Step-by-step
+1. Install Jenkins

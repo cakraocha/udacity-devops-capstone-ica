@@ -1,0 +1,42 @@
+```
+# Update existing package
+sudo apt update
+
+# Install Java SDK
+sudo apt install -y default-jdk
+
+# Download Jenkins package
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+
+# Add the following entry in your /etc/apt/sources.list
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+# Update local package index
+sudo apt update
+
+# Install Jenkins
+sudo apt-get install -y jenkins
+
+# Start the Jenkins Server
+sudo systemctl start jenkins
+
+# Enable the service to load during boot
+sudo systemctl enable jenkins
+sudo systemctl status jenkins
+```
+
+Configure Jenkins plugin
+Mandatory:
+- Blue Ocean (Aggregator)
+- Pipeline: AWS Steps (pipeline-aws)
+
+Optional:
+- Pipeline Implementation for Blue Ocean
+- Git Pipeline for Blue Ocean
+- Display URL for Blue Ocean
+- Config API for Blue Ocean
+- Blue Ocean Pipeline Editor
+- Events API for Blue Ocean
+- Blue Ocean Executor Info
+
+Connect Jenkins to AWS Credentials using manage credentials
