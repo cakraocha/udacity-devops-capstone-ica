@@ -12,7 +12,7 @@ pipeline {
 			steps {
 				withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker-hub-ica', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD']]){
 					sh '''
-						docker build -t cakraocha/udacity-capstone-ica .
+						sudo docker build -t cakraocha/udacity-capstone-ica .
 					'''
 				}
 			}
