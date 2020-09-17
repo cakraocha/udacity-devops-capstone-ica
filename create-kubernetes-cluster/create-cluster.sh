@@ -1,5 +1,5 @@
 eksctl create cluster \
---name capstone_ica \
+--name capstone-ica \
 --version 1.17 \
 --nodegroup-name standard-workers \
 --node-type t2.small \
