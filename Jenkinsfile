@@ -30,6 +30,16 @@ pipeline {
 			}
 		}
 
+        stage('Set config AWS EKS') {
+            steps {
+                withAWS(region:'us-east-1', credentials:'ica-devops-capstone') {
+                    sh '''
+                        aws eks --region us-east-1 update-kubeconfig --name capstone-ica
+                    '''
+                }
+            }
+        }
+
         stage('Set current kubectl context') {
 			steps {
 				withAWS(region:'us-east-1', credentials:'ica-devops-capstone') {
