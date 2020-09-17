@@ -3,7 +3,7 @@ pipeline {
     stages {
 
         stage('Lint HTML') {
-                steps {
+            steps {
                 sh 'tidy -q -e *.html'
             }
         }
@@ -12,7 +12,7 @@ pipeline {
 			steps {
 				withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker-hub-ica', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD']]){
 					sh '''
-						sudo docker build -t cakraocha/udacity-capstone-ica .
+						docker build -t cakraocha/udacity-capstone-ica .
 					'''
 				}
 			}
