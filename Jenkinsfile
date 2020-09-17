@@ -85,6 +85,16 @@ pipeline {
                 input "Ready to redirect traffic to green?"
             }
         }
+
+        stage('Create the service in the cluster, redirect to green') {
+			steps {
+				withAWS(region:'us-east-1', credentials:'ica-devops-capstone') {
+					sh '''
+						kubectl apply -f ./green-service.json
+					'''
+				}
+			}
+		}
         
     }
 }
