@@ -79,6 +79,12 @@ pipeline {
 				}
 			}
 		}
+
+        stage('Wait user approval') {
+            steps {
+                input "Ready to redirect traffic to green?"
+            }
+        }
         
     }
 }
