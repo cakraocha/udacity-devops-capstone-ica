@@ -21,7 +21,7 @@ pipeline {
 
         stage('Push Image to Dockerhub') {
 			steps {
-				withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'dockerhub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD']]){
+				withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker-hub-ica', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD']]){
 					sh '''
 						docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 						docker push cakraocha/udacity-capstone-ica
