@@ -100,8 +100,12 @@ pipeline {
 			steps {
 				withAWS(region:'us-east-1', credentials:'ica-devops-capstone') {
 					sh '''
-						kubectl get services \
-                        kubectl get pods \
+						kubectl get services
+                    '''
+                    sh '''
+                        kubectl get pods
+                    '''
+                    sh '''
                         kubectl describe services bluegreenlb
 					'''
 				}
