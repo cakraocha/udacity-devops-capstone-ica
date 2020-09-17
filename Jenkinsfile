@@ -29,6 +29,16 @@ pipeline {
 				}
 			}
 		}
+
+        stage('Set current kubectl context') {
+			steps {
+				withAWS(region:'us-east-1', credentials:'ica-devops-capstone') {
+					sh '''
+						kubectl config use-context arn:aws:eks:us-east-1:558180201505:cluster/capstone-ica
+					'''
+				}
+			}
+		}
         
     }
 }
