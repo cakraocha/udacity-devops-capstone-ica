@@ -59,6 +59,16 @@ pipeline {
 				}
 			}
 		}
+
+        stage('Deploy green container') {
+			steps {
+				withAWS(region:'us-east-1', credentials:'ica-devops-capstone') {
+					sh '''
+						kubectl apply -f ./green-controller.json
+					'''
+				}
+			}
+		}
         
     }
 }

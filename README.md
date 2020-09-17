@@ -25,3 +25,4 @@ This repository is a capstone project for Udacity DevOps Nanodegree 2020
 10. Add stage 'Build Docker Image' to Jenkins
 11. Add stage 'Push Image to Dockerhub' to Jenkins
 12. Add stage 'Set current kubectl context' to Jenkins
+13. Define blue/green deployment
