@@ -12,6 +12,24 @@ This repository is a capstone project for Udacity DevOps Nanodegree 2020
 - Build Kubernetes clusters
 - Deploy the app or website using the Kubernetes clusters
 
+## Pipeline Design
+Create eksctl kubernetes cluster -> Linting -> Build Docker Image -> Push Docker Image to Dockerhub -> Set config AWS EKS ->
+Set current kubectl context -> Create Blue replication controller -> Create Green replication controller ->
+Create the service in Kubernetes cluster in charge of routing traffic to Blue replication controller and expose to outside world ->
+Wait for user's approval -> Update the service to redirect to Green
+
+## Project Requirement
+Make sure you have installed these requirements to use the CI/CD pipeline:
+- Jenkins
+- Blueocean Plugin in Jenkins
+- Pipeline-AWS Plugin in Jenkins
+- AWS Account
+- AWS CLI
+- Docker and Docker Account
+- Pip
+- eksctl
+- kubectl
+
 ## Project Step-by-step
 1. Install Jenkins
 2. Configure Jenkins plugin
@@ -27,3 +45,10 @@ This repository is a capstone project for Udacity DevOps Nanodegree 2020
 12. Add stage 'Set current kubectl context' to Jenkins
 13. Define blue/green deployment
 14. Pipeline ready!
+
+```
+Please follow the deployment_screenshots/ for deployment screenshots
+```
+
+*Special thanks to mehmetincefidan for the repo as guidance for this project*
+https://github.com/mehmetincefidan/Udacity-Cloud-DevOps-Engineer-Capstone-Project
