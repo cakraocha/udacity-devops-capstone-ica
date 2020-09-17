@@ -21,3 +21,4 @@ This repository is a capstone project for Udacity DevOps Nanodegree 2020
 6. Create Kubernetes cluster using eksctl
 7. Create kubeconfig in AWS EKS
 8. Build a Dockerfile
+9. Add stage 'Lint HTML' to Jenkins
