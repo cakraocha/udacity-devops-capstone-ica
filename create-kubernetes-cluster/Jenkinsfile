@@ -7,8 +7,8 @@ pipeline {
 				withAWS(region:'us-east-1', credentials:'ica-devops-capstone') {
 					sh '''
 						eksctl create cluster \
-						--name capstonecluster \
-						--version 1.13 \
+						--name capstone_ica \
+						--version 1.17 \
 						--nodegroup-name standard-workers \
 						--node-type t2.small \
 						--nodes 2 \
@@ -23,7 +23,7 @@ pipeline {
 				}
 			}
 		}
-        
+
 		stage('Create conf file cluster') {
 			steps {
 				withAWS(region:'us-east-1', credentials:'ica-devops-capstone') {

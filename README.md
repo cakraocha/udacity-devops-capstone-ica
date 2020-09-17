@@ -14,3 +14,8 @@ This repository is a capstone project for Udacity DevOps Nanodegree 2020
 
 ## Project Step-by-step
 1. Install Jenkins
+2. Configure Jenkins plugin
+3. Create pipeline in Jenkins by connecting to GitHub
+4. Create AWS credentials in Jenkins to connect to AWS
+5. Configure AWS CLI to connect AWS to your local system
+6. Create Kubernetes cluster using eksctl
