@@ -20,3 +20,4 @@ This repository is a capstone project for Udacity DevOps Nanodegree 2020
 5. Configure AWS CLI to connect AWS to your local system
 6. Create Kubernetes cluster using eksctl
 7. Create kubeconfig in AWS EKS
+8. Build a Dockerfile
