@@ -40,3 +40,5 @@ Optional:
 - Blue Ocean Executor Info
 
 Connect Jenkins to AWS Credentials using manage credentials
+
+Connect Jenkins to Dockerfile using manage credentials
