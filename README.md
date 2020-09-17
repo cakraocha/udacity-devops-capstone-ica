@@ -39,12 +39,13 @@ Make sure you have installed these requirements to use the CI/CD pipeline:
 6. Create Kubernetes cluster using eksctl
 7. Create kubeconfig in AWS EKS
 8. Build a Dockerfile
-9. Add stage 'Lint HTML' to Jenkins
-10. Add stage 'Build Docker Image' to Jenkins
-11. Add stage 'Push Image to Dockerhub' to Jenkins
-12. Add stage 'Set current kubectl context' to Jenkins
-13. Define blue/green deployment
-14. Pipeline ready!
+9. Create repository on Dockerhub
+10. Add stage 'Lint HTML' to Jenkins
+11. Add stage 'Build Docker Image' to Jenkins
+12. Add stage 'Push Image to Dockerhub' to Jenkins
+13. Add stage 'Set current kubectl context' to Jenkins
+14. Define blue/green deployment
+15. Pipeline ready!
 
 ```
 Please follow the deployment_screenshots/ for deployment screenshots
